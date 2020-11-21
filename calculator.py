@@ -228,12 +228,14 @@ class Calculator:
             self.text_input.set(self.expression + self.recall)
 
     def convert_deg(self):
+        global convert_constant, inverse_convert_constant
         convert_constant = pi / 180
         inverse_convert_constant = 180 / pi
         self.btn_Rad["foreground"] = 'white'
         self.btn_Deg["foreground"] = 'orange'
 
     def convert_rad(self):
+        global convert_constant, inverse_convert_contant
         convert_constant = 1
         inverse_convert_constant = 1
         self.btn_Rad["foreground"] = 'orange'

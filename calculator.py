@@ -4,9 +4,9 @@ from math import *
 
 # Conversion Constants For Trigonometric Functions
 global convert_constant
-convert_constant = 1
+convert_constant = '1'
 global inverse_convert_constant
-inverse_convert_constant = 1
+inverse_convert_constant = '1'
 
 # buton Design
 btn_params = {
@@ -229,15 +229,15 @@ class Calculator:
 
     def convert_deg(self):
         global convert_constant, inverse_convert_constant
-        convert_constant = pi / 180
-        inverse_convert_constant = 180 / pi
+        convert_constant = 'pi/180'
+        inverse_convert_constant = '180/pi'
         self.btn_Rad["foreground"] = 'white'
         self.btn_Deg["foreground"] = 'orange'
 
     def convert_rad(self):
         global convert_constant, inverse_convert_contant
-        convert_constant = 1
-        inverse_convert_constant = 1
+        convert_constant = '1'
+        inverse_convert_constant = '1'
         self.btn_Rad["foreground"] = 'orange'
         self.btn_Deg["foreground"] = 'white'
 

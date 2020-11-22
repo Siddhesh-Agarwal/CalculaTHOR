@@ -8,7 +8,7 @@ convert_constant = '1'
 global inverse_convert_constant
 inverse_convert_constant = '1'
 
-# buton Design
+# Button Design
 btn_params = {
     'padx': 16,
     'pady': 1,
@@ -251,7 +251,7 @@ class Calculator:
             self.text_input.set(self.sum_up)
             self.expression = self.sum_up
         except:
-            try:p
+            try:
                 self.expression += ')'
                 self.sum_up = str(eval(self.expression))
                 self.text_input.set(self.sum_up)
@@ -265,5 +265,5 @@ root = tk.Tk()
 b = Calculator(root)
 root.title("Scientific Calculator")
 root.geometry("650x465+50+50")
-root.resizable(False, False)
+root.resizable(0, 0)
 root.mainloop()

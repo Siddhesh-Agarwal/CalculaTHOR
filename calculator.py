@@ -247,11 +247,11 @@ class Calculator:
 
     def btn_equal(self):
         try:
-            self.sum_up = str(round(eval(self.expression), 8))
+            self.sum_up = str(round(eval(self.expression),8))
             self.text_input.set(self.sum_up)
             self.expression = self.sum_up
         except:
-            try:
+            try:p
                 self.expression += ')'
                 self.sum_up = str(eval(self.expression))
                 self.text_input.set(self.sum_up)

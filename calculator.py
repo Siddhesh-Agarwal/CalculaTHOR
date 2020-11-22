@@ -166,13 +166,13 @@ class Calculator:
         self.btn_add.configure(activebackground = "#FB9F10", bg = '#FB9F10', foreground = '#FFFFFF')
         self.btn_add.grid(row = 3, column = 9)
 
-        self.btn_sin_inverse = tk.Button(bottom_frame, btn_params, text = u"sin-\u00B9", command = lambda: self.btn_click(f'asin({inverse_convert_constant}*'))
+        self.btn_sin_inverse = tk.Button(bottom_frame, btn_params, text = u"sin-\u00B9", command = lambda: self.btn_click(f'{inverse_convert_constant}*asin('))
         self.btn_sin_inverse.grid(row = 4, column = 1)
 
-        self.btn_cos_inverse = tk.Button(bottom_frame, btn_params, text = u"cos-\u00B9", command = lambda: self.btn_click(f'acos({inverse_convert_constant}*'))
+        self.btn_cos_inverse = tk.Button(bottom_frame, btn_params, text = u"cos-\u00B9", command = lambda: self.btn_click(f'{inverse_convert_constant}*acos('))
         self.btn_cos_inverse.grid(row = 4, column = 2)
         
-        self.btn_tan_inverse = tk.Button(bottom_frame, btn_params, text = u"tan-\u00B9", command = lambda: self.btn_click(f'atan({inverse_convert_constant}*'))
+        self.btn_tan_inverse = tk.Button(bottom_frame, btn_params, text = u"tan-\u00B9", command = lambda: self.btn_click(f'{inverse_convert_constant}*atan('))
         self.btn_tan_inverse.grid(row = 4, column = 3)
 
         self.btn_pi = tk.Button(bottom_frame, btn_params, text = "π", command = lambda: self.btn_click('pi'))

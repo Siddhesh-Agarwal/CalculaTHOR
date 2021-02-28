@@ -216,17 +216,6 @@ class Calculator:
     def memory_add(self):
         self.recall = self.recall + '+' + self.expression
 
-    def answer(self):
-        self.answer = self.sum_up
-        self.expression = self.expression + self.answer
-        self.text_input.set(self.expression)
-
-    def memory_recall(self):
-        if self.expression == '':
-            self.text_input.set('0' + self.expression + self.recall)
-        else:
-            self.text_input.set(self.expression + self.recall)
-
     def convert_deg(self):
         global convert_constant, inverse_convert_constant
         convert_constant = 'pi/180'
@@ -253,17 +242,15 @@ class Calculator:
         except:
             try:
                 self.expression += ')'
-                self.sum_up = str(eval(self.expression))
-                self.text_input.set(self.sum_up)
-                self.expression = self.sum_up
+                self.expression = self.btn_equal()
             except:
                 self.sum_up = 'Invalid Format'
                 self.text_input.set(self.sum_up)
                 self.expression = self.sum_up
-
+#driver
 root = tk.Tk()
 b = Calculator(root)
 root.title("Scientific Calculator")
-root.geometry("650x465+50+50")
+root.geometry("650x465")
 root.resizable(0, 0)
 root.mainloop()

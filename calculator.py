@@ -213,8 +213,8 @@ class Calculator:
         self.expression = self.expression + '-'
         self.text_input.set(self.expression)
 
-    def memory_add(self):
-        self.recall = self.recall + '+' + self.expression
+
+
 
     def convert_deg(self):
         global convert_constant, inverse_convert_constant
